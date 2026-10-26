@@ -1,0 +1,6 @@
+interface:
+  display_name: "george-verify"
+  short_description: "George mode's acceptance module."
+  default_prompt: "Use $george-verify to complete this task and provide real acceptance evidence."
+policy:
+  allow_implicit_invocation: false

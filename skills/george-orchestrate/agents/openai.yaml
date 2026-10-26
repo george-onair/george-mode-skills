@@ -1,0 +1,6 @@
+interface:
+  display_name: "george-orchestrate"
+  short_description: "George's multi-phase orchestration, PR progression, continuous execution, pausing and resuming."
+  default_prompt: "Use $george-orchestrate to complete this task and provide real acceptance evidence."
+policy:
+  allow_implicit_invocation: false

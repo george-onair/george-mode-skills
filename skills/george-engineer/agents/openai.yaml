@@ -1,0 +1,6 @@
+interface:
+  display_name: "george-engineer"
+  short_description: "George's complete engineering domain pack: features, bugs, refactors, performance, forensics, visual parity and engineering delivery."
+  default_prompt: "Use $george-engineer to complete this task and provide real acceptance evidence."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "george-investigate"
+  short_description: "George mode's read-only investigation module."
+  default_prompt: "Use $george-investigate to complete this task and provide real acceptance evidence."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,31 @@
+# Rules and version records
+
+Source case: {{CASE_ID}}  |  Rule ID: to be assigned RULE-NNNN  |  Version: v001
+
+Parent version: first record  |  Status: candidate  |  Time recorded: to be filled
+
+## Rule statement
+
+- Under what conditions, which actor takes what action, through what mechanism or evidence of effect, expecting to change what result:
+- Applicable objects, arena, scale, time frame and necessary permissions:
+- Known counterexamples, failure conditions and scope that must not be extrapolated:
+
+## Evidence and relative value
+
+| Source case / OB / RV | Supports or opposes | Independent? | Design and identification limits | Gain and cost relative to baseline |
+|---|---|---|---|---|
+| To be filled |  |  |  |  |
+
+## Adoption and review
+
+Specific criteria for candidate, trial, adopted and retired:
+
+Actual decision-maker, adoption time, scope of effect, next review and verification method:
+
+## Version history
+
+| New version | Parent version | Change | Evidence and UP | Status | Effective time | Projects affected |
+|---|---|---|---|---|---|---|
+| To be filled |  |  |  |  |  |  |
+
+The currently adopted version may change; old versions and their results must not be overwritten.

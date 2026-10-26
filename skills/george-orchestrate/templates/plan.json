@@ -1,0 +1,36 @@
+{
+  "mode": "plan-only",
+  "units": [
+    {
+      "id": "feature-a",
+      "depends_on": [],
+      "owner": "feature-owner",
+      "files": [
+        "src/feature-a"
+      ],
+      "deliverable": "Behavior change and runnable artifact",
+      "acceptance": "User completes the expected action from the specified entry point",
+      "rollback": "Revert this round's isolated changes; do not touch the user's uncommitted work",
+      "playbook": "feature",
+      "checks": {
+        "unit": {
+          "applicable": true,
+          "method": "The project's real test command",
+          "pass_when": "Behavior assertions pass",
+          "evidence": "artifacts/unit.txt"
+        },
+        "live": {
+          "applicable": true,
+          "method": "Real entry-point action and state read-back",
+          "pass_when": "Target action and result are both observable",
+          "evidence": "artifacts/live.json"
+        },
+        "perf": {
+          "applicable": false,
+          "reason": "This unit does not change a performance-critical path; confirmed by source investigation"
+        }
+      }
+    }
+  ],
+  "project_root": "/REPLACE_WITH_PROJECT"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "george-evaluate"
+  short_description: "George's blind tests, performance-number audits and acceptance of skill updates."
+  default_prompt: "Use $george-evaluate to complete this task and provide real acceptance evidence."
+policy:
+  allow_implicit_invocation: false
