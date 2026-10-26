@@ -1,8 +1,52 @@
 # george-mode
 
-A matrix of 11 agent skills that make a coding/knowledge agent work in a **decide → act → verify → reflect** loop: register goals, assumptions, falsifiers, predictions and stop conditions before high-stakes choices, and verify real behavior before claiming "done".
+**Skills that make coding agents prove their work: every "done" is split into separate, checkable evidence lines instead of one vague claim.**
 
-Works with any host that loads `SKILL.md` skill folders: Claude Code, OpenAI Codex, Cursor, oh-my-pi (OMP), Grok CLI, Google Antigravity.
+- **Who it's for:** people running Claude Code, Codex, Cursor or similar agents on real repos who are tired of "done" meaning "I wrote a file".
+- **Works with:** any host that loads `SKILL.md` folders (Claude Code, OpenAI Codex, Cursor, oh-my-pi, Grok CLI, Google Antigravity).
+- **Requires:** Python 3, standard library only. MIT licensed.
+
+## 30-second quickstart
+
+```sh
+git clone https://github.com/george-onair/george-mode-skills.git
+cd george-mode-skills
+python3 scripts/install.py           # dry run: prints the symlinks it would create
+python3 scripts/install.py --apply   # install (never overwrites existing paths)
+```
+
+Then start a task with `/george-mode` (or `$george-mode`, depending on your host).
+
+## What you get back
+
+Instead of "Done!", the agent reports each acceptance layer on its own line and may not claim a higher layer from a lower one. The shape of a report (illustrative format, not real project data):
+
+```text
+Result: login redirect fixed.
+- File exists:      src/auth/redirect.ts changed
+- Checks pass:      unit tests for auth run and pass
+- Real run:         not done (no staging host available)
+- External state:   not applicable
+Open: verify on staging before release.
+```
+
+A real command you can run right now, from the repo root:
+
+```sh
+$ python3 scripts/verify_package.py
+{
+  "passed": true,
+  "errors": [],
+  "scope": "package integrity, not host runtime"
+}
+```
+
+Note the `scope` line: even the integrity check says what it does *not* prove.
+
+**Related:** for small standalone skills (a `SKILL.md` debugger, a minimal MCP server plan, a repo license preflight), see [george-onair/claude-code-skills](https://github.com/george-onair/claude-code-skills).
+**Updates:** [@George_ONair on X](https://x.com/George_ONair).
+
+The full set is 11 skills that run a **decide, act, verify, reflect** loop: register goals, assumptions, falsifiers, predictions and stop conditions before high-stakes choices, and verify real behavior before claiming "done".
 
 ## Skills
 
